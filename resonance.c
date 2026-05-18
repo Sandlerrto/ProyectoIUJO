@@ -1,28 +1,24 @@
 /*
- * ══════════════════════════════════════════════════════════════════════
- *  RESONANCE: BLOOD DEBT  —  Battle Simulator v4.0
- *  Authors   : Team RESONANCE
- *  Language  : C  (English naming conventions — snake_case)
+ * ════════════════════════════════════════════════════════════════
+ *   RESONANCE: BLOOD DEBT  —  Simulador Completo v0.7.1
+ *   Lenguaje: C 
+ * ════════════════════════════════════════════════════════════════
  *
- *  Compile Dev C++  : gcc resonance_v4.c -o resonance -lm
- *  Compile VSCode   : gcc resonance_v4.c -o resonance -lm   (see tasks.json)
- *  Compile Linux/Mac: gcc resonance_v4.c -o resonance -lm && ./resonance
- *  Compile MSVC     : cl resonance_v4.c /Fe:resonance.exe
+ *  CONCEPTOS APLICADOS:
+ *  A. Informática  : tipo de variables, structs, punteros, arreglos, ciclos, condicionales
+ *  B. Matemática   : polinomios, logaritmos, valor absoluto, inecuaciones
+ *  C. Proposicional: conectivos &&/||, cuantificadores, teoría de conjuntos
  *
- *  Applied concepts:
- *  A. Structs         : Champion, Team, GlossaryEntry
- *  B. Pointers        : Champion*, Team* — real-time data manipulation
- *  C. Arrays          : catalog[12], members[5], selected[5]
- *  D. Loops           : for, while (battle loop, menus, catalog)
- *  E. Conditionals    : if/else, switch/case (menus, damage, status)
- *  F. Math            : polynomial damage, log10 scaling, abs mitigation
- *  G. Propositional   : && / || advantage table, existential quantifier
- *  H. Set theory      : disjoint enums Faction / Role
- *  I. Bilingual UI    : T("ES","EN") macro — toggle with option 6
- *  J. English Glossary: Weeks 3-15 (grammar, NP, VP, modals, tenses…)
- * ══════════════════════════════════════════════════════════════════════
+ *  FACCIONES:
+ *   0 VIGILANTES   → PROTOCOLO ESCUDO   (+25% DEF, reduce ventaja a x1.2)
+ *   1 DISONANTES   → PULSO CAÓTICO      (+20% ATQ, 30% parálisis)
+ *   2 SINDICATO    → PROTOCOLO NULO     (+15% ATQ/HAB, penetra 20% DEF)
+ *   3 ARQUITECTOS  → ECO ANCESTRAL      (+20% HP, legado 15% al morir)
+ *
+ *  CICLO DE VENTAJA (x1.5):
+ *   VIGILANTES → DISONANTES → SINDICATO → ARQUITECTOS → VIGILANTES
+ * ════════════════════════════════════════════════════════════════
  */
-
 
 #ifdef _WIN32
   #define CLEAR_CMD "cls"
